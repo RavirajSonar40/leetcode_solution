@@ -1,0 +1,13 @@
+// Last updated: 27/04/2026, 04:05:30
+class Solution {
+    public int fib(int n) {
+     int []arr=new int[n+1];
+        Arrays.fill(arr,-1);
+        return helper(n,arr);
+    }
+    public int helper(int n,int []dp){
+        if(n<2)return n;
+        if(dp[n]!=-1)return dp[n];
+        return dp[n]=helper(n-1,dp)+helper(n-2,dp);
+    }
+}
